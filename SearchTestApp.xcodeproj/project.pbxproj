@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		D056CA61262A1773009BBC4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056CA60262A1773009BBC4A /* AppDelegate.swift */; };
 		D056CA63262A1773009BBC4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056CA62262A1773009BBC4A /* SceneDelegate.swift */; };
-		D056CA65262A1773009BBC4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056CA64262A1773009BBC4A /* ViewController.swift */; };
+		D056CA65262A1773009BBC4A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056CA64262A1773009BBC4A /* SearchViewController.swift */; };
 		D056CA68262A1773009BBC4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D056CA66262A1773009BBC4A /* Main.storyboard */; };
 		D056CA6A262A1775009BBC4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D056CA69262A1775009BBC4A /* Assets.xcassets */; };
 		D056CA6D262A1775009BBC4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D056CA6B262A1775009BBC4A /* LaunchScreen.storyboard */; };
+		D056CA79262C8846009BBC4A /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056CA78262C8846009BBC4A /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D056CA5D262A1773009BBC4A /* SearchTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D056CA60262A1773009BBC4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D056CA62262A1773009BBC4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D056CA64262A1773009BBC4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D056CA64262A1773009BBC4A /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D056CA67262A1773009BBC4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D056CA69262A1775009BBC4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D056CA6C262A1775009BBC4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D056CA6E262A1775009BBC4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D056CA78262C8846009BBC4A /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				D056CA60262A1773009BBC4A /* AppDelegate.swift */,
 				D056CA62262A1773009BBC4A /* SceneDelegate.swift */,
-				D056CA64262A1773009BBC4A /* ViewController.swift */,
+				D056CA64262A1773009BBC4A /* SearchViewController.swift */,
 				D056CA66262A1773009BBC4A /* Main.storyboard */,
 				D056CA69262A1775009BBC4A /* Assets.xcassets */,
 				D056CA6B262A1775009BBC4A /* LaunchScreen.storyboard */,
 				D056CA6E262A1775009BBC4A /* Info.plist */,
+				D056CA78262C8846009BBC4A /* SearchResult.swift */,
 			);
 			path = SearchTestApp;
 			sourceTree = "<group>";
@@ -137,8 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D056CA65262A1773009BBC4A /* ViewController.swift in Sources */,
+				D056CA65262A1773009BBC4A /* SearchViewController.swift in Sources */,
 				D056CA61262A1773009BBC4A /* AppDelegate.swift in Sources */,
+				D056CA79262C8846009BBC4A /* SearchResult.swift in Sources */,
 				D056CA63262A1773009BBC4A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
