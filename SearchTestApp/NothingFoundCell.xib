@@ -33,7 +33,7 @@
     </objects>
     <resources>
         <namedColor name="ArtistName">
-            <color red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.32549019607843138" green="0.10588235294117647" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
