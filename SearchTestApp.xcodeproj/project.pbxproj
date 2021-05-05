@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D03C29FC26432C8700F43884 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03C29FB26432C8700F43884 /* UIImageView+DownloadImage.swift */; };
 		D056CA61262A1773009BBC4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056CA60262A1773009BBC4A /* AppDelegate.swift */; };
 		D056CA63262A1773009BBC4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056CA62262A1773009BBC4A /* SceneDelegate.swift */; };
 		D056CA65262A1773009BBC4A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056CA64262A1773009BBC4A /* SearchViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D03C29FB26432C8700F43884 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		D056CA5D262A1773009BBC4A /* SearchTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D056CA60262A1773009BBC4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D056CA62262A1773009BBC4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				D056CA60262A1773009BBC4A /* AppDelegate.swift */,
 				D056CA62262A1773009BBC4A /* SceneDelegate.swift */,
 				D056CA64262A1773009BBC4A /* SearchViewController.swift */,
+				D03C29FB26432C8700F43884 /* UIImageView+DownloadImage.swift */,
 				D056CA66262A1773009BBC4A /* Main.storyboard */,
 				D056CA69262A1775009BBC4A /* Assets.xcassets */,
 				D056CA6E262A1775009BBC4A /* Info.plist */,
@@ -153,6 +156,7 @@
 			files = (
 				D056CA65262A1773009BBC4A /* SearchViewController.swift in Sources */,
 				D056CA61262A1773009BBC4A /* AppDelegate.swift in Sources */,
+				D03C29FC26432C8700F43884 /* UIImageView+DownloadImage.swift in Sources */,
 				D056CA79262C8846009BBC4A /* SearchResult.swift in Sources */,
 				D056CA63262A1773009BBC4A /* SceneDelegate.swift in Sources */,
 				D056CA80262E1148009BBC4A /* SearchResultCell.swift in Sources */,
