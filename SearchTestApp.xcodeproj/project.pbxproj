@@ -18,6 +18,7 @@
 		D056CA80262E1148009BBC4A /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056CA7F262E1148009BBC4A /* SearchResultCell.swift */; };
 		D056CA84262E1834009BBC4A /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D056CA83262E1834009BBC4A /* NothingFoundCell.xib */; };
 		D056CA8926403ED1009BBC4A /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D056CA8826403ED1009BBC4A /* LoadingCell.xib */; };
+		D0588CFA2644766900DE67C5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0588CF92644766900DE67C5 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D056CA7F262E1148009BBC4A /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		D056CA83262E1834009BBC4A /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		D056CA8826403ED1009BBC4A /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		D0588CF92644766900DE67C5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				D056CA62262A1773009BBC4A /* SceneDelegate.swift */,
 				D056CA64262A1773009BBC4A /* SearchViewController.swift */,
 				D03C29FB26432C8700F43884 /* UIImageView+DownloadImage.swift */,
+				D0588CF92644766900DE67C5 /* DetailViewController.swift */,
 				D056CA66262A1773009BBC4A /* Main.storyboard */,
 				D056CA69262A1775009BBC4A /* Assets.xcassets */,
 				D056CA6E262A1775009BBC4A /* Info.plist */,
@@ -160,6 +163,7 @@
 				D056CA79262C8846009BBC4A /* SearchResult.swift in Sources */,
 				D056CA63262A1773009BBC4A /* SceneDelegate.swift in Sources */,
 				D056CA80262E1148009BBC4A /* SearchResultCell.swift in Sources */,
+				D0588CFA2644766900DE67C5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
