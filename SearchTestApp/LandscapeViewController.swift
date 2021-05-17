@@ -47,7 +47,16 @@ class LandscapeViewController: UIViewController {
         
         if firstTime {
             firstTime = false
-            titleButtons(search.searchResults)
+            switch search.state {
+            case .notSearchedYet:
+                break
+            case .noResults:
+                showNothingFOundLabel()
+            case .loading:
+                showSpinner()
+            case .results(let list):
+                titleButtons(list)
+            }
         }
     }
     
@@ -73,6 +82,9 @@ class LandscapeViewController: UIViewController {
             completion: nil)
     }
     
+    @objc func buttonPressed(_ sender: UIButton) {
+      performSegue(withIdentifier: "ShowDetail", sender: sender)
+    }
 //MARK: - Private Methods
     
     private func titleButtons(_ searchResults: [SearchResult]) {
@@ -116,6 +128,12 @@ class LandscapeViewController: UIViewController {
                     column = 0; x += marginX * 2
                 }
             }
+            
+            button.tag = 2000 + index
+            button.addTarget(
+              self,
+              action: #selector(buttonPressed),
+              for: .touchUpInside)
         }
         
         let buttonsPerPage = columnsPerPage * rowsPerPage
@@ -128,6 +146,7 @@ class LandscapeViewController: UIViewController {
         
         pageControl.numberOfPages = numPages
         pageControl.currentPage = 0
+ 
     }
     
     private func downloadImage(for searchResult: SearchResult, andPlaceOn button: UIButton) {
@@ -148,17 +167,49 @@ class LandscapeViewController: UIViewController {
       }
     }
 
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func showSpinner() {
+        let spinner = UIActivityIndicatorView(style: .large)
+        spinner.center = CGPoint(x: scrollView.bounds.midX + 0.5, y: scrollView.bounds.midY + 0.5)
+        
+        spinner.tag = 1000
+        view.addSubview(spinner)
+        spinner.startAnimating()
     }
-    */
-
+    
+    private func showNothingFOundLabel() {
+        let label = UILabel(frame: CGRect.zero)
+        label.text = "Nothing Found"
+        label.textColor = UIColor.label
+        label.backgroundColor = UIColor.clear
+        
+        label.sizeToFit()
+        
+        var rect = label.frame
+        rect.size.width = ceil(rect.size.width / 2) * 2
+        rect.size.width = ceil(rect.size.height / 2) * 2
+        label.frame = rect
+        
+        label.center = CGPoint(x: scrollView.bounds.midX, y: scrollView.bounds.midY)
+        view.addSubview(label)
+    }
+    
+    //MARK: - Helper Methods
+    
+    func searchResultsReceived() {
+        hideSpinner()
+        
+        switch search.state {
+        case .notSearchedYet, .loading:
+            break
+        case .noResults: showNothingFOundLabel()
+        case .results(let list):
+            titleButtons(list)
+        }
+    }
+    
+    private func hideSpinner() {
+        view.viewWithTag(1000)?.removeFromSuperview()
+    }
 }
 
 extension LandscapeViewController: UIScrollViewDelegate {
@@ -166,6 +217,17 @@ extension LandscapeViewController: UIScrollViewDelegate {
         let width = scrollView.bounds.size.width
         let page = Int((scrollView.contentOffset.x + width / 2) / width)
         pageControl.currentPage = page
+    }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == "ShowDetail" {
+        if case .results(let list) = search.state {
+          let detailViewController = segue.destination as! DetailViewController
+          let searchResult = list[(sender as! UIButton).tag - 2000]
+          detailViewController.searchResult = searchResult
+        }
+      }
     }
     
 }
