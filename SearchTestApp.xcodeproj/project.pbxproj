@@ -24,6 +24,8 @@
 		D0588D0A2648522D00DE67C5 /* LandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0588D092648522D00DE67C5 /* LandscapeViewController.swift */; };
 		D0588D0D2649BA0E00DE67C5 /* FadeOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0588D0C2649BA0E00DE67C5 /* FadeOutAnimationController.swift */; };
 		D0588D10264C550900DE67C5 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0588D0F264C550900DE67C5 /* Search.swift */; };
+		D0D4D4E9265A7E9C006A2506 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0D4D4EB265A7E9C006A2506 /* InfoPlist.strings */; };
+		D0D9B55B265A766400663270 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0D9B55D265A766400663270 /* Localizable.strings */; };
 		D0FC92372656DE7A008E44BE /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FC92392656DE7A008E44BE /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,10 @@
 		D0588D092648522D00DE67C5 /* LandscapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeViewController.swift; sourceTree = "<group>"; };
 		D0588D0C2649BA0E00DE67C5 /* FadeOutAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeOutAnimationController.swift; sourceTree = "<group>"; };
 		D0588D0F264C550900DE67C5 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		D0D4D4EA265A7E9C006A2506 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0D4D4ED265A7E9E006A2506 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D0D9B55C265A766400663270 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D0D9B55F265A77B700663270 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0FC92382656DE7A008E44BE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
 		D0FC923E2656E19A008E44BE /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +116,8 @@
 				D0588D092648522D00DE67C5 /* LandscapeViewController.swift */,
 				D0588D0C2649BA0E00DE67C5 /* FadeOutAnimationController.swift */,
 				D0588D0F264C550900DE67C5 /* Search.swift */,
+				D0D9B55D265A766400663270 /* Localizable.strings */,
+				D0D4D4EB265A7E9C006A2506 /* InfoPlist.strings */,
 			);
 			path = SearchTestApp;
 			sourceTree = "<group>";
@@ -173,6 +181,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D056CA6A262A1775009BBC4A /* Assets.xcassets in Resources */,
+				D0D4D4E9265A7E9C006A2506 /* InfoPlist.strings in Resources */,
+				D0D9B55B265A766400663270 /* Localizable.strings in Resources */,
 				D036FE8E2656E2810006477A /* LoadingCell.xib in Resources */,
 				D036FE992656E5CF0006477A /* SearchResultCell.xib in Resources */,
 				D0FC92372656DE7A008E44BE /* NothingFoundCell.xib in Resources */,
@@ -230,6 +240,24 @@
 				D036FE972656E4600006477A /* ru */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0D4D4EB265A7E9C006A2506 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0D4D4EA265A7E9C006A2506 /* en */,
+				D0D4D4ED265A7E9E006A2506 /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D0D9B55D265A766400663270 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0D9B55C265A766400663270 /* en */,
+				D0D9B55F265A77B700663270 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		D0FC92392656DE7A008E44BE /* NothingFoundCell.xib */ = {

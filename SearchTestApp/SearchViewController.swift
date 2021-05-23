@@ -75,7 +75,7 @@ class SearchViewController: UIViewController {
     //MARK: - Helper Method
 
     func showNetworkError() {
-        let alert = UIAlertController(title: "Wooops...", message: "There was an error accessing the Itunes Store" + "Please try again" , preferredStyle: .alert)
+        let alert = UIAlertController(title: NSLocalizedString("Wooops...", comment: "Error alert: title"), message: NSLocalizedString("There was an error accessing the Itunes Store. Please try again", comment: "Error alert: message") , preferredStyle: .alert)
         
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)

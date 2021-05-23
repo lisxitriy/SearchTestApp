@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  SearchTestApp
+
+  Created by Olga Trofimova on 23.05.2021.
+  
+*/
+
+CFBundleDisplayName = "Search";
