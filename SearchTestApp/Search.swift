@@ -58,7 +58,7 @@ class Search {
                     }
                     
                 if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200, let data = data {
-                        var searchResults = self.parse(data: data)
+                    var searchResults = self.parse(data: data)
                     if searchResults.isEmpty {
                         newState = .noResults
                     } else {
@@ -66,14 +66,14 @@ class Search {
                         newState = .results(searchResults)
                     }
                      success = true
+                }
+                
+                DispatchQueue.main.async {
+                    self.state = newState
+                    completion(success)
                     }
-                   
-                        DispatchQueue.main.async {
-                            self.state = newState
-                            completion(success)
-                        }
-                    }
-                dataTask?.resume()
+                }
+            dataTask?.resume()
             }
         }
     

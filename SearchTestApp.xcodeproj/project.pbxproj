@@ -97,6 +97,7 @@
 		D056CA5F262A1773009BBC4A /* SearchTestApp */ = {
 			isa = PBXGroup;
 			children = (
+				D0588D0F264C550900DE67C5 /* Search.swift */,
 				D056CA60262A1773009BBC4A /* AppDelegate.swift */,
 				D056CA62262A1773009BBC4A /* SceneDelegate.swift */,
 				D056CA64262A1773009BBC4A /* SearchViewController.swift */,
@@ -115,7 +116,6 @@
 				D0588D062648458E00DE67C5 /* SlideOutAnimationController.swift */,
 				D0588D092648522D00DE67C5 /* LandscapeViewController.swift */,
 				D0588D0C2649BA0E00DE67C5 /* FadeOutAnimationController.swift */,
-				D0588D0F264C550900DE67C5 /* Search.swift */,
 				D0D9B55D265A766400663270 /* Localizable.strings */,
 				D0D4D4EB265A7E9C006A2506 /* InfoPlist.strings */,
 			);
