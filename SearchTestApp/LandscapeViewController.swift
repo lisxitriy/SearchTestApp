@@ -186,8 +186,9 @@ class LandscapeViewController: UIViewController {
         
         var rect = label.frame
         rect.size.width = ceil(rect.size.width / 2) * 2
-        rect.size.width = ceil(rect.size.height / 2) * 2
+        rect.size.height = ceil(rect.size.height / 2) * 2
         label.frame = rect
+     
         
         label.center = CGPoint(x: scrollView.bounds.midX, y: scrollView.bounds.midY)
         view.addSubview(label)
