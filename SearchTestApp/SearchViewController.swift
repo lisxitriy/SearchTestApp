@@ -13,8 +13,10 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    weak var splitViewDetail: DetailViewController?
     var landscapeVC: LandscapeViewController?
     private let search = Search()
+    
     
     struct TableView {
       struct CellIdentifiers {
@@ -40,7 +42,11 @@ class SearchViewController: UIViewController {
         tableView.register(cellNib, forCellReuseIdentifier: TableView.CellIdentifiers.loadingCell)
         
 //        показывать клавиатуру сразу при запуске приложения
-        searchBar.becomeFirstResponder()
+        if UIDevice.current.userInterfaceIdiom != .pad {
+            searchBar.becomeFirstResponder()
+        }
+        
+        title = NSLocalizedString("Search", comment: "split view primary button")
     }
     
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -121,6 +127,15 @@ class SearchViewController: UIViewController {
 
         }
     }
+    
+    private func hidePrimaryPane() {
+        UIView.animate(withDuration: 0.25) {
+            self.splitViewController?.preferredDisplayMode = .secondaryOnly
+        } completion: { _ in
+            self.splitViewController?.preferredDisplayMode = .automatic
+        }
+
+    }
  }
 
 //MARK: - Search Bar Delegate
@@ -187,7 +202,22 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "ShowDetail", sender: indexPath)
+        
+        searchBar.resignFirstResponder()
+        
+        if view.window!.rootViewController?.traitCollection.horizontalSizeClass == .compact {
+            tableView.deselectRow(at: indexPath, animated: true)
+            performSegue(withIdentifier: "ShowDetail", sender: indexPath)
+        } else {
+            if case .results(let list) = search.state {
+                splitViewDetail?.searchResult = list[indexPath.row]
+            }
+            if splitViewController?.displayMode != .oneBesideSecondary {
+                hidePrimaryPane()
+            }
+        }
+        
+        
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {

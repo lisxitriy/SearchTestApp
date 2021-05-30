@@ -1,0 +1,39 @@
+
+/* Class = "UIButton"; normalTitle = "$9.99"; ObjectID = "IPn-Yx-89W"; */
+"IPn-Yx-89W.normalTitle" = "$9.99";
+
+/* Class = "UILabel"; text = "Artist Name"; ObjectID = "Kwf-pE-44o"; */
+"Kwf-pE-44o.text" = "Artist Name";
+
+/* Class = "UILabel"; text = "Type:"; ObjectID = "RkO-Fe-OaY"; */
+"RkO-Fe-OaY.text" = "Type:";
+
+/* Class = "UIViewController"; title = "Search"; ObjectID = "ZD5-0a-Nxj"; */
+"ZD5-0a-Nxj.title" = "Search";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "ZwQ-1m-uzB"; */
+"ZwQ-1m-uzB.text" = "Name";
+
+/* Class = "UILabel"; text = "Artist Name"; ObjectID = "baI-LP-cig"; */
+"baI-LP-cig.text" = "Artist Name";
+
+/* Class = "UISearchBar"; placeholder = "App name, artist, song, album, e-book"; ObjectID = "h91-vQ-aak"; */
+"h91-vQ-aak.placeholder" = "App name, artist, song, album, e-book";
+
+/* Class = "UILabel"; text = "Genre:"; ObjectID = "jhR-a2-eXw"; */
+"jhR-a2-eXw.text" = "Genre:";
+
+/* Class = "UILabel"; text = "Artist Name"; ObjectID = "td4-d4-1DG"; */
+"td4-d4-1DG.text" = "Artist Name";
+
+/* Class = "UISegmentedControl"; xod-TR-Pov.segmentTitles[0] = "All"; ObjectID = "xod-TR-Pov"; */
+"xod-TR-Pov.segmentTitles[0]" = "All";
+
+/* Class = "UISegmentedControl"; xod-TR-Pov.segmentTitles[1] = "Music"; ObjectID = "xod-TR-Pov"; */
+"xod-TR-Pov.segmentTitles[1]" = "Music";
+
+/* Class = "UISegmentedControl"; xod-TR-Pov.segmentTitles[2] = "Software"; ObjectID = "xod-TR-Pov"; */
+"xod-TR-Pov.segmentTitles[2]" = "Software";
+
+/* Class = "UISegmentedControl"; xod-TR-Pov.segmentTitles[3] = "E-books"; ObjectID = "xod-TR-Pov"; */
+"xod-TR-Pov.segmentTitles[3]" = "E-books";
