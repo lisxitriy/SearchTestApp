@@ -59,6 +59,13 @@ class SearchViewController: UIViewController {
                 break
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            navigationController?.navigationBar.isHidden = true
+        }
+    }
 
     @IBAction func segmentedChanged(_ sender: UISegmentedControl) {
        performSearch()
@@ -74,6 +81,7 @@ class SearchViewController: UIViewController {
                     let indexPath = sender as! IndexPath
                     let searchResult = list[indexPath.row]
                     detailVC.searchResult = searchResult
+                    detailVC.isPopUp = true
                 }
             }
         }
@@ -216,8 +224,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
                 hidePrimaryPane()
             }
         }
-        
-        
+    
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
