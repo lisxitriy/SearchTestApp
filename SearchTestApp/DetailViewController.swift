@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class DetailViewController: UIViewController {
     
@@ -58,39 +59,40 @@ class DetailViewController: UIViewController {
             if let displayName = Bundle.main.localizedInfoDictionary?["CFBundleDisplayName"] as? String {
                 title = displayName
             }
+//            кнопка popover
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showPopover(_:)))
         }
         if searchResult != nil {
             updateUI()
         }
     }
     
-    @IBAction func openInStore() {
-        if let url = URL(string: searchResult.storeURL) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        }
-    }
     
     deinit {
         print("deinit \(self)")
         downloadTask?.cancel()
     }
     //MARK: - Actions
+    @IBAction func openInStore() {
+        if let url = URL(string: searchResult.storeURL) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
     
     @IBAction func close() {
         dismissStyle = .slide
         dismiss(animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func showPopover(_ sender: UIBarButtonItem) {
+        guard let popover = storyboard?.instantiateViewController(withIdentifier: "PopoverView") as? MenuViewController else { return }
+        popover.modalPresentationStyle = .popover
+        if let ppc = popover.popoverPresentationController {
+            ppc.barButtonItem = sender
+        }
+        popover.delegate = self
+        present(popover, animated: true, completion: nil)
     }
-    */
     
     //MARK: - Helper Methods
     
@@ -154,4 +156,24 @@ extension DetailViewController: UIViewControllerTransitioningDelegate {
         
     }
     
+}
+
+extension DetailViewController: MenuViewControllerDelegate {
+    func menuViewControllerSendEmail(_ controller: MenuViewController) {
+        dismiss(animated: true) {
+            if MFMailComposeViewController.canSendMail() {
+                let controller = MFMailComposeViewController()
+                controller.mailComposeDelegate = self
+                controller.setSubject(NSLocalizedString("Support Request", comment: "Email subject"))
+                controller.setToRecipients(["your@email-adress-here.com"])
+                self.present(controller, animated: true, completion: nil)
+            }
+        }
+    }
+}
+
+extension DetailViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
+    }
 }

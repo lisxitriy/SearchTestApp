@@ -24,6 +24,7 @@
 		D0588D0A2648522D00DE67C5 /* LandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0588D092648522D00DE67C5 /* LandscapeViewController.swift */; };
 		D0588D0D2649BA0E00DE67C5 /* FadeOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0588D0C2649BA0E00DE67C5 /* FadeOutAnimationController.swift */; };
 		D0588D10264C550900DE67C5 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0588D0F264C550900DE67C5 /* Search.swift */; };
+		D06EB9452666D49100F09A04 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EB9442666D49100F09A04 /* MenuViewController.swift */; };
 		D0D4D4E9265A7E9C006A2506 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0D4D4EB265A7E9C006A2506 /* InfoPlist.strings */; };
 		D0D9B55B265A766400663270 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0D9B55D265A766400663270 /* Localizable.strings */; };
 		D0FC92372656DE7A008E44BE /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FC92392656DE7A008E44BE /* NothingFoundCell.xib */; };
@@ -52,6 +53,7 @@
 		D0588D0C2649BA0E00DE67C5 /* FadeOutAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeOutAnimationController.swift; sourceTree = "<group>"; };
 		D0588D0F264C550900DE67C5 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		D06EB9422663D08300F09A04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		D06EB9442666D49100F09A04 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		D0D4D4EA265A7E9C006A2506 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0D4D4ED265A7E9E006A2506 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0D9B55C265A766400663270 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				D0588D0C2649BA0E00DE67C5 /* FadeOutAnimationController.swift */,
 				D0D9B55D265A766400663270 /* Localizable.strings */,
 				D0D4D4EB265A7E9C006A2506 /* InfoPlist.strings */,
+				D06EB9442666D49100F09A04 /* MenuViewController.swift */,
 			);
 			path = SearchTestApp;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				D0588D10264C550900DE67C5 /* Search.swift in Sources */,
 				D056CA65262A1773009BBC4A /* SearchViewController.swift in Sources */,
 				D056CA61262A1773009BBC4A /* AppDelegate.swift in Sources */,
+				D06EB9452666D49100F09A04 /* MenuViewController.swift in Sources */,
 				D0588D0D2649BA0E00DE67C5 /* FadeOutAnimationController.swift in Sources */,
 				D03C29FC26432C8700F43884 /* UIImageView+DownloadImage.swift in Sources */,
 				D056CA79262C8846009BBC4A /* SearchResult.swift in Sources */,
